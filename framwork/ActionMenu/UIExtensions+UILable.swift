@@ -1,5 +1,5 @@
 //
-//  UIExtensions.swift
+//  UIExtensions+UILable.swift
 //  ActionMenu
 //
 //  Created by 樊半缠 on 16/8/11.
@@ -90,7 +90,7 @@ extension ActionLabel {
         // 清空文字
         self.text = nil;
     }
-    /** 赋值 */
+    /** 复制 */
     func copyText() -> Void {
         // 将label的文字存储到粘贴板
         UIPasteboard.generalPasteboard().string = self.text

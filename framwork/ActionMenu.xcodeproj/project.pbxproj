@@ -11,7 +11,7 @@
 		044F71F61D5C2D2400CD60E8 /* ActionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044F71EB1D5C2D2400CD60E8 /* ActionMenu.framework */; };
 		044F71FB1D5C2D2400CD60E8 /* ActionMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F71FA1D5C2D2400CD60E8 /* ActionMenuTests.swift */; };
 		044F72061D5C2DA700CD60E8 /* ActionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F72051D5C2DA700CD60E8 /* ActionMenu.swift */; };
-		044F720C1D5C3BE300CD60E8 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F720B1D5C3BE300CD60E8 /* UIExtensions.swift */; };
+		044F720C1D5C3BE300CD60E8 /* UIExtensions+UILable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F720B1D5C3BE300CD60E8 /* UIExtensions+UILable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 		044F71FA1D5C2D2400CD60E8 /* ActionMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMenuTests.swift; sourceTree = "<group>"; };
 		044F71FC1D5C2D2400CD60E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044F72051D5C2DA700CD60E8 /* ActionMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionMenu.swift; sourceTree = "<group>"; };
-		044F720B1D5C3BE300CD60E8 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		044F720B1D5C3BE300CD60E8 /* UIExtensions+UILable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIExtensions+UILable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		044F71ED1D5C2D2400CD60E8 /* ActionMenu */ = {
 			isa = PBXGroup;
 			children = (
-				044F720B1D5C3BE300CD60E8 /* UIExtensions.swift */,
+				044F720B1D5C3BE300CD60E8 /* UIExtensions+UILable.swift */,
 				044F72051D5C2DA700CD60E8 /* ActionMenu.swift */,
 				044F71EE1D5C2D2400CD60E8 /* ActionMenu.h */,
 				044F71F01D5C2D2400CD60E8 /* Info.plist */,
@@ -201,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044F72061D5C2DA700CD60E8 /* ActionMenu.swift in Sources */,
-				044F720C1D5C3BE300CD60E8 /* UIExtensions.swift in Sources */,
+				044F720C1D5C3BE300CD60E8 /* UIExtensions+UILable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
