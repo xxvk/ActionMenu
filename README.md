@@ -81,33 +81,61 @@ Easy call / dismiss Action menu bar like ![bar](brief/example.png)
 > 
 > 在UIView 或者 Controller 里面实现 ActionableProtocol 必须重写的函数 , 在扩展里面有写如何实现的例子
 >
->required, must be override implement
+>required, must be override implement : 必须在对应类里面实现
 >
 >		func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool
 >
->required, must be override implement
+>required, must be override implement : 必须在对应类里面实现
 >
 >		func canBecomeFirstResponder() -> Bool
 
 ### UIExtensions+UILable.swift
 
 > ###### ActionLabel 
-> 
-> "Actionable Protocol" is Inplemented inside. Which provide an example of how to funtion objects with "ActionMenu" with sub-class of UIView 
+>  		
+> HOW TO USE :
+>
+> * with Code: use *init* method 
+> * Storyboard or XIB : change label object *sub class to "ActionLabel"* with *module "ActionMenu"*
+>
+>
+> ###### WANT MORE UIExtensions :
+>
+> look into this class to find "Actionable Protocol" is Inplemented inside. Which provide an example of how to funtion objects with "ActionMenu" with sub-class of UIView 
 > 
 > 在内部实现了 ActionableProtocol 和点击手势. 查看里面的具体实现可以了解Actionable Protocol在UIView的自类里面是如何被封装的
 > 
->   －
+>   
 >  
+> ###### Support Actions : 实现了的动作函数
 >
-  Support Actions : 实现了的动作函数
 >
-> * 		func cutText() : 剪切
-> * 		func pasteText() : 粘贴
-> * 		func copyText() : 复制
-> * 		func red() : 改变文字颜色－红色
-> * 		func blue() : 改变文字颜色－蓝色
-> * 		func green() : 改变文字颜色－绿色
+>
+> cut : 剪切
+> 
+>  		func cutText()
+>
+> paste : 粘贴
+>
+>  		func pasteText()
+>  		
+> copy : 复制  
+> 		
+>  		func copyText()
+>  		
+> red : 改变文字颜色－红色
+> 
+>  		func red()
+>  		
+> blue : 改变文字颜色－蓝色
+> 
+>  		func blue()
+>  		
+> green : 改变文字颜色－绿色
+> 
+>  		func green()
+>  		
+>
 >
 >
 >
@@ -127,7 +155,8 @@ if you have any question,contact me.
 
 有问题找大哥
 
-email:xxvk@outlook.com
+email:[xxvk@outlook.com](mailto:xxvk@outlook.com)
 
 wechat:phrekn
 
+website: [reformation.tech](http://reformation.tech)
