@@ -51,19 +51,19 @@ Easy call / dismiss Action menu bar like ![bar](brief/example.png)
 > 
 >init : 构造方法
 >
->	convenience public init(actions:[UIMenuItem], direction: UIMenuControllerArrowDirection?, inView: UIView)
+>		convenience public init(actions:[UIMenuItem], direction: UIMenuControllerArrowDirection?, inView: UIView)
 >
 >delegate : 代理
 >
->	public weak var delegate: ActionMenuDelegate?
+>		public weak var delegate: ActionMenuDelegate?
 >
 >show : 呼出
 >
->	public func show(animated animated: Bool, handler completion: (Void) -> Void) -> Void
+>		public func show(animated animated: Bool, handler completion: (Void) -> Void) -> Void
 >
 >dismiss : 隐藏
 >
->	public func dismiss(animated animated: Bool, handler completion: (Void) -> Void) -> Void
+>		public func dismiss(animated animated: Bool, handler completion: (Void) -> Void) -> Void
 >
 > 
 >
@@ -71,7 +71,7 @@ Easy call / dismiss Action menu bar like ![bar](brief/example.png)
 >
 > life cycle control : 生命周期
 >
-> 	func actionMenuDidDismissed(menu: ActionMenu)
+> 		func actionMenuDidDismissed(menu: ActionMenu)
 >
 > 
 >
@@ -83,11 +83,11 @@ Easy call / dismiss Action menu bar like ![bar](brief/example.png)
 >
 >required, must be override implement
 >
->	func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool
+>		func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool
 >
 >required, must be override implement
 >
->	func canBecomeFirstResponder() -> Bool
+>		func canBecomeFirstResponder() -> Bool
 
 ### UIExtensions+UILable.swift
 
@@ -102,12 +102,12 @@ Easy call / dismiss Action menu bar like ![bar](brief/example.png)
 >
   Support Actions : 实现了的动作函数
 >
-> * func cutText() : 剪切
-> * func pasteText() : 粘贴
-> * func copyText() : 复制
-> * func red() : 改变文字颜色－红色
-> * func blue() : 改变文字颜色－蓝色
-> * func green() : 改变文字颜色－绿色
+> * 		func cutText() : 剪切
+> * 		func pasteText() : 粘贴
+> * 		func copyText() : 复制
+> * 		func red() : 改变文字颜色－红色
+> * 		func blue() : 改变文字颜色－蓝色
+> * 		func green() : 改变文字颜色－绿色
 >
 >
 >
