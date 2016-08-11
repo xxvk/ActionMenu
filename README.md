@@ -1,10 +1,13 @@
 # ActionMenu
-![icon](brief/iTunesArtwork@2x.png)
 
 [![Swift](https://img.shields.io/badge/swift-2.3-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/platform-ios-lightgrey.svg)](https://developer.apple.com/swift/)
 [![License](https://img.shields.io/badge/license-MIT-71787A.svg)](https://tldrlegal.com/license/mit-license)
 [![Join the chat at https://gitter.im/xxvk/Apple-System-Info](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/xxvk/ActionMenu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+![icon](brief/iTunesArtwork@2x.png)
+
 
 Readme content will be expressed in both English and Chinese.
 
