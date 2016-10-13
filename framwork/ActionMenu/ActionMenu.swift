@@ -9,18 +9,18 @@
 import UIKit
 
 @objc public protocol ActionMenuDelegate: NSObjectProtocol {
-    func actionMenuDidDismissed(menu: ActionMenu)
+    func actionMenuDidDismissed(_ menu: ActionMenu)
     
 }
-public class ActionMenu: NSObject {
+open class ActionMenu: NSObject {
     
-    public let raw: UIMenuController = UIMenuController.sharedMenuController()
+    open let raw: UIMenuController = UIMenuController.shared
     
     //  MARK: interactive
-    public weak var delegate: ActionMenuDelegate?
+    open weak var delegate: ActionMenuDelegate?
     
-    public var targetRect: CGRect?
-    public var inView: UIView?
+    open var targetRect: CGRect?
+    open var inView: UIView?
     
     override public init() {
         super.init()
@@ -33,27 +33,27 @@ public class ActionMenu: NSObject {
         if direction != nil {
             self.raw.arrowDirection = direction!
         }else{
-            self.raw.arrowDirection = .Default
+            self.raw.arrowDirection = .default
         }
         
-        if !(inView.isFirstResponder()) {
+        if !(inView.isFirstResponder) {
             inView.becomeFirstResponder()
         }
         
         self.raw.menuItems = actions
         
         
-        self.targetRect = CGRectMake(0,
-                                     inView.bounds.height * 0.5,
-                                     inView.bounds.width,
-                                     1)
+        self.targetRect = CGRect(x: 0,
+                                     y: inView.bounds.height * 0.5,
+                                     width: inView.bounds.width,
+                                     height: 1)
         self.inView = inView
         /*
          targetRect：menuController指向的矩形框
          targetView：targetRect以targetView的左上角为坐标原点
          */
-        dispatch_async(dispatch_get_main_queue()) {
-            self.raw.setTargetRect(self.targetRect! , inView: self.inView!)
+        DispatchQueue.main.async {
+            self.raw.setTargetRect(self.targetRect! , in: self.inView!)
         }
     }
     
@@ -70,8 +70,8 @@ public class ActionMenu: NSObject {
 }
 //  MARK: UI action
 extension ActionMenu{
-    public func show(animated animated: Bool, handler completion: (Void) -> Void) -> Void {
-        self.raw.setTargetRect(self.targetRect! , inView: self.inView!)
+    public func show(animated: Bool, handler completion: (Void) -> Void) -> Void {
+        self.raw.setTargetRect(self.targetRect! , in: self.inView!)
         
         self.raw.update()
         
@@ -80,7 +80,7 @@ extension ActionMenu{
         completion()
     }
     
-    public func dismiss(animated animated: Bool, handler completion: (Void) -> Void) -> Void {
+    public func dismiss(animated: Bool, handler completion: (Void) -> Void) -> Void {
         self.raw.update()
         
         self.raw.setMenuVisible(false, animated: animated)
@@ -93,14 +93,14 @@ extension ActionMenu{
  */
 //  MARK: - ActionableProtocol
 @objc public protocol ActionableProtocol {
-    func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool
+    @objc optional func canPerformAction(_ action: Selector, withSender sender: AnyObject?) -> Bool
     
-    func canBecomeFirstResponder() -> Bool
+    @objc optional func canBecomeFirstResponder() -> Bool
 }
 //  MARK: Sample of protocol overrides :
 extension ActionableProtocol {
-    func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool{
-        let raw = UIMenuController.sharedMenuController()
+    public func canPerformAction(_ action: Selector, withSender sender: AnyObject?) -> Bool{
+        let raw = UIMenuController.shared
         for item in raw.menuItems! {
             if action.description == item.action.description{
                 return true
@@ -109,7 +109,7 @@ extension ActionableProtocol {
         return false
     }
     
-    func canBecomeFirstResponder() -> Bool{
+    public func canBecomeFirstResponder() -> Bool{
         return true
     }
 }

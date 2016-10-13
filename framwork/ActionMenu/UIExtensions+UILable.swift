@@ -6,15 +6,35 @@
 //  Copyright © 2016年 reformation.tech. All rights reserved.
 //
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
 
-public class ActionLabel: UILabel {
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
+
+open class ActionLabel: UILabel {
     override public init(frame: CGRect) {
         super.init(frame: frame)
         
         self.configure()
     }
     //  MARK: life cycle
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         
         self.configure()
@@ -24,8 +44,8 @@ public class ActionLabel: UILabel {
 //        fatalError("init(coder:) has not been implemented")
     }
     
-    private func configure() -> Void {
-        self.userInteractionEnabled = true
+    fileprivate func configure() -> Void {
+        self.isUserInteractionEnabled = true
         
         //当前控件是label 所以是给label添加敲击手势
         let gesture = UITapGestureRecognizer.init(target: self, action: #selector(self.Tap))
@@ -33,7 +53,7 @@ public class ActionLabel: UILabel {
         self.addGestureRecognizer(gesture)
     }
     
-    @objc private func Tap() -> Void {
+    @objc fileprivate func Tap() -> Void {
         self.becomeFirstResponder()
         let actions: [UIMenuItem] = [UIMenuItem.init(title: "Copy", action: #selector(self.copyText)),
                                      UIMenuItem.init(title: "Paste", action: #selector(self.pasteText)),
@@ -42,25 +62,25 @@ public class ActionLabel: UILabel {
                                      UIMenuItem.init(title: "Blue", action: #selector(self.blue)),
                                      UIMenuItem.init(title: "Green", action: #selector(self.green))]
         
-        var menu = ActionMenu.init(actions: actions, direction: nil, inView: self)
+        let menu = ActionMenu.init(actions: actions, direction: nil, inView: self)
         
         menu.show(animated: true) { () in
             
             let thud = #selector(ActionMenuDelegate.actionMenuDidDismissed(_:))
             
             if menu.delegate != nil{
-                let xyzzy: Bool = menu.delegate!.respondsToSelector(thud)
+                let xyzzy: Bool = menu.delegate!.responds(to: thud)
                 if xyzzy {  menu.delegate?.actionMenuDidDismissed(menu)     }
             }
         }
     }
 }
 extension ActionLabel: ActionableProtocol{
-    public override func canBecomeFirstResponder() -> Bool {
+    open override var canBecomeFirstResponder : Bool {
         return true
     }
     
-    public override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+    open override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
 //        (foo,bar, baz, qux, quux, corge,grault, garply, waldo, fred, plugh, xyzzy, thud)
         let foo = (action == #selector(self.copyText)) && (self.text?.characters.count > 0)// 需要有文字才能支持复制
         let bar = action == #selector(self.pasteText)
@@ -86,28 +106,28 @@ extension ActionLabel {
     func cutText() -> Void {
         //UIPasteboard 是可以在应用程序与应用程序之间共享的
         // 将label的文字存储到粘贴板
-        UIPasteboard.generalPasteboard().string = self.text
+        UIPasteboard.general.string = self.text
         // 清空文字
         self.text = nil;
     }
     /** 复制 */
     func copyText() -> Void {
         // 将label的文字存储到粘贴板
-        UIPasteboard.generalPasteboard().string = self.text
+        UIPasteboard.general.string = self.text
     }
     /** 粘贴 */
     func pasteText() -> Void {
         // 将粘贴板的文字赋值给label
-        self.text = UIPasteboard.generalPasteboard().string
+        self.text = UIPasteboard.general.string
     }
     //如果方法不实现,是不会显示出来的
     func red() -> Void {
-        self.textColor = UIColor.redColor()
+        self.textColor = UIColor.red
     }
     func blue() -> Void {
-        self.textColor = UIColor.blueColor()
+        self.textColor = UIColor.blue
     }
     func green() -> Void {
-        self.textColor = UIColor.greenColor()
+        self.textColor = UIColor.green
     }
 }

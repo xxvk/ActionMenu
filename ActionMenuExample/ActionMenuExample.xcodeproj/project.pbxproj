@@ -12,37 +12,18 @@
 		044F71B91D5C2D0D00CD60E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F71B71D5C2D0D00CD60E8 /* Main.storyboard */; };
 		044F71BB1D5C2D0D00CD60E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F71BA1D5C2D0D00CD60E8 /* Assets.xcassets */; };
 		044F71BE1D5C2D0D00CD60E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F71BC1D5C2D0D00CD60E8 /* LaunchScreen.storyboard */; };
-		044F71C91D5C2D0E00CD60E8 /* ActionMenuExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F71C81D5C2D0E00CD60E8 /* ActionMenuExampleTests.swift */; };
-		044F71D41D5C2D0E00CD60E8 /* ActionMenuExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F71D31D5C2D0E00CD60E8 /* ActionMenuExampleUITests.swift */; };
-		044F72081D5C38D400CD60E8 /* ActionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044F72071D5C38D400CD60E8 /* ActionMenu.framework */; };
-		044F72091D5C38D400CD60E8 /* ActionMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 044F72071D5C38D400CD60E8 /* ActionMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E17440651DAFE3B2005B78CE /* ActionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17440641DAFE3B2005B78CE /* ActionMenu.framework */; };
+		E17440661DAFE3B2005B78CE /* ActionMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E17440641DAFE3B2005B78CE /* ActionMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		044F71C51D5C2D0E00CD60E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 044F71A81D5C2D0D00CD60E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 044F71AF1D5C2D0D00CD60E8;
-			remoteInfo = ActionMenuExample;
-		};
-		044F71D01D5C2D0E00CD60E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 044F71A81D5C2D0D00CD60E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 044F71AF1D5C2D0D00CD60E8;
-			remoteInfo = ActionMenuExample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		044F720A1D5C38D400CD60E8 /* Embed Frameworks */ = {
+		E17440671DAFE3B2005B78CE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				044F72091D5C38D400CD60E8 /* ActionMenu.framework in Embed Frameworks */,
+				E17440661DAFE3B2005B78CE /* ActionMenu.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,13 +38,7 @@
 		044F71BA1D5C2D0D00CD60E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044F71BD1D5C2D0D00CD60E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044F71BF1D5C2D0D00CD60E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		044F71C41D5C2D0E00CD60E8 /* ActionMenuExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionMenuExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		044F71C81D5C2D0E00CD60E8 /* ActionMenuExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMenuExampleTests.swift; sourceTree = "<group>"; };
-		044F71CA1D5C2D0E00CD60E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		044F71CF1D5C2D0E00CD60E8 /* ActionMenuExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionMenuExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		044F71D31D5C2D0E00CD60E8 /* ActionMenuExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMenuExampleUITests.swift; sourceTree = "<group>"; };
-		044F71D51D5C2D0E00CD60E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		044F72071D5C38D400CD60E8 /* ActionMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ActionMenu.framework; path = "/Users/ea/Library/Developer/Xcode/DerivedData/ActionMenu-exjujbccllnrvpenkpbkzrkufecz/Build/Products/Debug-iphoneos/ActionMenu.framework"; sourceTree = "<absolute>"; };
+		E17440641DAFE3B2005B78CE /* ActionMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ActionMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,21 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044F72081D5C38D400CD60E8 /* ActionMenu.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044F71C11D5C2D0E00CD60E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044F71CC1D5C2D0E00CD60E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E17440651DAFE3B2005B78CE /* ActionMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,10 +56,8 @@
 		044F71A71D5C2D0D00CD60E8 = {
 			isa = PBXGroup;
 			children = (
-				044F72071D5C38D400CD60E8 /* ActionMenu.framework */,
+				E17440641DAFE3B2005B78CE /* ActionMenu.framework */,
 				044F71B21D5C2D0D00CD60E8 /* ActionMenuExample */,
-				044F71C71D5C2D0E00CD60E8 /* ActionMenuExampleTests */,
-				044F71D21D5C2D0E00CD60E8 /* ActionMenuExampleUITests */,
 				044F71B11D5C2D0D00CD60E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				044F71B01D5C2D0D00CD60E8 /* ActionMenuExample.app */,
-				044F71C41D5C2D0E00CD60E8 /* ActionMenuExampleTests.xctest */,
-				044F71CF1D5C2D0E00CD60E8 /* ActionMenuExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,24 +83,6 @@
 			path = ActionMenuExample;
 			sourceTree = "<group>";
 		};
-		044F71C71D5C2D0E00CD60E8 /* ActionMenuExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				044F71C81D5C2D0E00CD60E8 /* ActionMenuExampleTests.swift */,
-				044F71CA1D5C2D0E00CD60E8 /* Info.plist */,
-			);
-			path = ActionMenuExampleTests;
-			sourceTree = "<group>";
-		};
-		044F71D21D5C2D0E00CD60E8 /* ActionMenuExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				044F71D31D5C2D0E00CD60E8 /* ActionMenuExampleUITests.swift */,
-				044F71D51D5C2D0E00CD60E8 /* Info.plist */,
-			);
-			path = ActionMenuExampleUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,7 +93,7 @@
 				044F71AC1D5C2D0D00CD60E8 /* Sources */,
 				044F71AD1D5C2D0D00CD60E8 /* Frameworks */,
 				044F71AE1D5C2D0D00CD60E8 /* Resources */,
-				044F720A1D5C38D400CD60E8 /* Embed Frameworks */,
+				E17440671DAFE3B2005B78CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,42 +103,6 @@
 			productName = ActionMenuExample;
 			productReference = 044F71B01D5C2D0D00CD60E8 /* ActionMenuExample.app */;
 			productType = "com.apple.product-type.application";
-		};
-		044F71C31D5C2D0E00CD60E8 /* ActionMenuExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 044F71DB1D5C2D0E00CD60E8 /* Build configuration list for PBXNativeTarget "ActionMenuExampleTests" */;
-			buildPhases = (
-				044F71C01D5C2D0E00CD60E8 /* Sources */,
-				044F71C11D5C2D0E00CD60E8 /* Frameworks */,
-				044F71C21D5C2D0E00CD60E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				044F71C61D5C2D0E00CD60E8 /* PBXTargetDependency */,
-			);
-			name = ActionMenuExampleTests;
-			productName = ActionMenuExampleTests;
-			productReference = 044F71C41D5C2D0E00CD60E8 /* ActionMenuExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		044F71CE1D5C2D0E00CD60E8 /* ActionMenuExampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 044F71DE1D5C2D0E00CD60E8 /* Build configuration list for PBXNativeTarget "ActionMenuExampleUITests" */;
-			buildPhases = (
-				044F71CB1D5C2D0E00CD60E8 /* Sources */,
-				044F71CC1D5C2D0E00CD60E8 /* Frameworks */,
-				044F71CD1D5C2D0E00CD60E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				044F71D11D5C2D0E00CD60E8 /* PBXTargetDependency */,
-			);
-			name = ActionMenuExampleUITests;
-			productName = ActionMenuExampleUITests;
-			productReference = 044F71CF1D5C2D0E00CD60E8 /* ActionMenuExampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -213,15 +116,8 @@
 				TargetAttributes = {
 					044F71AF1D5C2D0D00CD60E8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8JMTDVPJ92;
-					};
-					044F71C31D5C2D0E00CD60E8 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 044F71AF1D5C2D0D00CD60E8;
-					};
-					044F71CE1D5C2D0E00CD60E8 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 044F71AF1D5C2D0D00CD60E8;
+						DevelopmentTeam = A7MD3F59BU;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -239,8 +135,6 @@
 			projectRoot = "";
 			targets = (
 				044F71AF1D5C2D0D00CD60E8 /* ActionMenuExample */,
-				044F71C31D5C2D0E00CD60E8 /* ActionMenuExampleTests */,
-				044F71CE1D5C2D0E00CD60E8 /* ActionMenuExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,20 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044F71C21D5C2D0E00CD60E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044F71CD1D5C2D0E00CD60E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -282,36 +162,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044F71C01D5C2D0E00CD60E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				044F71C91D5C2D0E00CD60E8 /* ActionMenuExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044F71CB1D5C2D0E00CD60E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				044F71D41D5C2D0E00CD60E8 /* ActionMenuExampleUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		044F71C61D5C2D0E00CD60E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 044F71AF1D5C2D0D00CD60E8 /* ActionMenuExample */;
-			targetProxy = 044F71C51D5C2D0E00CD60E8 /* PBXContainerItemProxy */;
-		};
-		044F71D11D5C2D0E00CD60E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 044F71AF1D5C2D0D00CD60E8 /* ActionMenuExample */;
-			targetProxy = 044F71D01D5C2D0E00CD60E8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		044F71B71D5C2D0D00CD60E8 /* Main.storyboard */ = {
@@ -424,12 +275,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = A7MD3F59BU;
 				INFOPLIST_FILE = ActionMenuExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = reform.ActionMenuExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -439,58 +292,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = A7MD3F59BU;
 				INFOPLIST_FILE = ActionMenuExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = reform.ActionMenuExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		044F71DC1D5C2D0E00CD60E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ActionMenuExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = reform.ActionMenuExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionMenuExample.app/ActionMenuExample";
-			};
-			name = Debug;
-		};
-		044F71DD1D5C2D0E00CD60E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ActionMenuExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = reform.ActionMenuExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActionMenuExample.app/ActionMenuExample";
-			};
-			name = Release;
-		};
-		044F71DF1D5C2D0E00CD60E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ActionMenuExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = reform.ActionMenuExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ActionMenuExample;
-			};
-			name = Debug;
-		};
-		044F71E01D5C2D0E00CD60E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ActionMenuExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = reform.ActionMenuExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ActionMenuExample;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -511,24 +320,6 @@
 			buildConfigurations = (
 				044F71D91D5C2D0E00CD60E8 /* Debug */,
 				044F71DA1D5C2D0E00CD60E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		044F71DB1D5C2D0E00CD60E8 /* Build configuration list for PBXNativeTarget "ActionMenuExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				044F71DC1D5C2D0E00CD60E8 /* Debug */,
-				044F71DD1D5C2D0E00CD60E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		044F71DE1D5C2D0E00CD60E8 /* Build configuration list for PBXNativeTarget "ActionMenuExampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				044F71DF1D5C2D0E00CD60E8 /* Debug */,
-				044F71E01D5C2D0E00CD60E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

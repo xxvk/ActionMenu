@@ -11,22 +11,22 @@ import ActionMenu
 
 class ViewController: UIViewController {
 
-    @IBAction func left_Navi_Click(sender: UIButton) {
-        let menu = ActionMenu.init(actions: self.actions, direction: UIMenuControllerArrowDirection.Left, inView: sender)
+    @IBAction func left_Navi_Click(_ sender: UIButton) {
+        let menu = ActionMenu.init(actions: self.actions, direction: UIMenuControllerArrowDirection.left, inView: sender)
         
         menu.show(animated: true, handler: { () in
             
         })
     }
-    @IBAction func middle_Navi_Click(sender: UIButton) {
+    @IBAction func middle_Navi_Click(_ sender: UIButton) {
         let menu = ActionMenu.init(actions: self.actions, direction: nil, inView: sender)
         
         menu.show(animated: true, handler: { () in
             
         })
     }
-    @IBAction func right_Navi_Click(sender: UIButton) {
-        let menu = ActionMenu.init(actions: self.actions, direction: UIMenuControllerArrowDirection.Right, inView: sender)
+    @IBAction func right_Navi_Click(_ sender: UIButton) {
+        let menu = ActionMenu.init(actions: self.actions, direction: UIMenuControllerArrowDirection.right, inView: sender)
         
         menu.show(animated: true, handler: { () in
             
@@ -53,21 +53,21 @@ class ViewController: UIViewController {
     }
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ViewController", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ViewController", for: indexPath)
         cell.textLabel?.text = "title"
         cell.detailTextLabel?.text = "details"
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         
         let menu = ActionMenu.init(actions: self.actions, direction: nil, inView: cell!.contentView)
         
@@ -78,10 +78,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 extension ViewController: ActionableProtocol {
     
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder : Bool {
         return true
     }
-    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         //        (foo,bar, baz, qux, quux, corge,grault, garply, waldo, fred, plugh, xyzzy, thud)
         let foo = (action == #selector(self.copyText))
         
@@ -101,17 +101,17 @@ extension ViewController: ActionableProtocol {
     func copyText() -> Void {
         let indexPath = self.tableView.indexPathForSelectedRow
         if indexPath != nil {
-            let cell = self.tableView.cellForRowAtIndexPath(indexPath!)
+            let cell = self.tableView.cellForRow(at: indexPath!)
             
-            UIPasteboard.generalPasteboard().string = cell?.detailTextLabel!.text
+            UIPasteboard.general.string = cell?.detailTextLabel!.text
             
-            let alert = UIAlertController.init(title: "Pasteboard did save String:", message: cell?.detailTextLabel!.text, preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController.init(title: "Pasteboard did save String:", message: cell?.detailTextLabel!.text, preferredStyle: UIAlertControllerStyle.alert)
             
-            self.presentViewController(alert, animated: true, completion: {
+            self.present(alert, animated: true, completion: {
                 
                 let delay = Int64.init(NSEC_PER_SEC * 1)
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay), dispatch_get_main_queue(), {
-                    alert.dismissViewControllerAnimated(true, completion: nil)
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC), execute: {
+                    alert.dismiss(animated: true, completion: nil)
                 })
                 
             })
